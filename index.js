@@ -1,5 +1,5 @@
 var express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var fs = require('fs');
 var app = express();
 
@@ -17,6 +17,7 @@ var read_json = function read_json(filename, default_value) {
   try {
     return JSON.parse(fs.readFileSync(filename));
   } catch(e) {
+    console.log(e);
     return default_value || {};
   }
 };
