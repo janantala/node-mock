@@ -1,0 +1,12 @@
+{
+  "name": "express-mock",
+  "version": "0.1.0",
+  "description": "Express server mock",
+  "keywords": ["mock", "express", "server"],
+  "authors": ["Jan Antala <hello@janantala.com>"],
+  "license": "MIT",
+  "main": "./index.js",
+  "dependencies": {
+    "express": "~4.3.1"
+  }
+}
