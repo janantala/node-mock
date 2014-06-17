@@ -10,7 +10,7 @@ app.use(function(req, res, next){
 });
 
 // parse application/json and application/x-www-form-urlencoded
-app.use(bodyParser());
+app.use(bodyParser({limit: '50mb'}));
 
 
 var read_json = function read_json(filename, default_value) {
