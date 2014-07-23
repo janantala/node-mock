@@ -26,11 +26,11 @@ var path = 'json';
 
 app.get('/', function(req, res){
   console.dir(req.query);
-  var data =  read_json(path + 'index' + '.get.json');
+  var data =  read_json(path + '/index' + '.get.json');
   res.json(data);
 });
 
-app.get('/:path', function(req, res){
+app.get('/*', function(req, res){
   console.dir(req.query);
   var data =  read_json(path + req.path + '.get.json');
   res.json(data);
@@ -38,22 +38,22 @@ app.get('/:path', function(req, res){
 
 app.post('/', function(req, res){
   console.dir(req.body);
-  var data =  read_json(path + 'index' + '.post.json');
+  var data =  read_json(path + '/index' + '.post.json');
   res.json(data);
 });
 
-app.post('/:path', function(req, res){
+app.post('/*', function(req, res){
   console.dir(req.body);
   var data =  read_json(path + req.path + '.post.json');
   res.json(data);
 });
 
 app.put('/', function(req, res){
-  var data =  read_json(path + 'index' + '.put.json');
+  var data =  read_json(path + '/index' + '.put.json');
   res.json(data);
 });
 
-app.put('/:path', function(req, res){
+app.put('/*', function(req, res){
   console.dir(req.body);
   var data =  read_json(path + req.path + '.put.json');
   res.json(data);
@@ -61,11 +61,11 @@ app.put('/:path', function(req, res){
 
 app.delete('/', function(req, res){
   console.dir(req.body);
-  var data =  read_json(path + 'index' + '.delete.json');
+  var data =  read_json(path + '/index' + '.delete.json');
   res.json(data);
 });
 
-app.delete('/:path', function(req, res){
+app.delete('/*', function(req, res){
   console.dir(req.body);
   var data =  read_json(path + req.path + '.delete.json');
   res.json(data);
